@@ -1,130 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ShadowHunt+</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+# 🛡️ ShadowHunt+
 
-    <style>
-        * { box-sizing: border-box; }
+ShadowHunt+ is a beginner-friendly **phishing website detection tool** built using **Python and Flask**. It analyzes a given URL and its webpage content to determine whether the site is **Safe, Suspicious, or Phishing**.
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: radial-gradient(circle at top, #020617, #000000 70%);
-            color: #e5e7eb;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+This project is designed to demonstrate **real-world cybersecurity concepts** in a simple and understandable way, making it ideal for students, beginners, and hackathon demos.
 
-        .container {
-            width: 90%;
-            max-width: 520px;
-            padding: 35px;
-            border-radius: 18px;
-            background: rgba(2, 6, 23, 0.9);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15), inset 0 0 30px rgba(56, 189, 248, 0.05);
-            border: 1px solid rgba(56, 189, 248, 0.25);
-            backdrop-filter: blur(12px);
-        }
+🚀 Features
 
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            margin-bottom: 5px;
-            color: #38bdf8;
-            letter-spacing: 1px;
-        }
+* 🔍 URL structure analysis (length, IP usage, special characters, HTTPS check)
+* 🌐 Live webpage content inspection
+* 🔐 Detects password fields and phishing keywords
+* 📊 Risk scoring mechanism
+* 🎯 Clear classification: Safe / Suspicious / Phishing
+* 🖥️ Clean cyber-themed web interface
+* ⚡ Lightweight and easy to run
 
-        .subtitle {
-            font-size: 14px;
-            color: #94a3b8;
-            margin-bottom: 25px;
-        }
+---
 
-        input {
-            width: 100%;
-            padding: 14px;
-            border-radius: 10px;
-            border: 1px solid #1e293b;
-            background: #020617;
-            color: #e5e7eb;
-            outline: none;
-            font-size: 15px;
-        }
+## 🧠 How It Works
 
-        input::placeholder { color: #64748b; }
+1. User enters a website URL
+2. The system analyzes:
 
-        button {
-            width: 100%;
-            margin-top: 18px;
-            padding: 14px;
-            border-radius: 12px;
-            border: none;
-            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-            color: #020617;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
-        }
+   * URL characteristics
+   * Webpage content using HTTP requests
+3. A risk score is calculated
+4. The website is classified based on the score
 
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.55);
-        }
+---
 
-        .result-box {
-            margin-top: 25px;
-            padding: 18px;
-            border-radius: 14px;
-            background: rgba(2, 6, 23, 0.85);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-        }
+## 🛠️ Tech Stack
 
-        .url { font-size: 13px; word-break: break-all; color: #94a3b8; margin-bottom: 10px; }
-        .safe { color: #22c55e; }
-        .suspicious { color: #facc15; }
-        .phishing { color: #ef4444; }
+* **Backend:** Python, Flask
+* **Frontend:** HTML, CSS (Cyber-themed UI)
+* **Libraries:**
 
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 12px;
-            color: #475569;
-        }
-    </style>
-</head>
-<body>
+  * requests
+  * BeautifulSoup
+  * urllib
+  * re
 
-<div class="container">
-    <h1>🛡 ShadowHunt+</h1>
-    <div class="subtitle">Advanced Phishing Detection System</div>
+---
 
-    <form method="POST" action="/">
-        <input type="text" name="url" placeholder="Enter website URL to scan" required>
-        <button type="submit">Scan Website</button>
-    </form>
+## 📂 Project Structure
 
-    {% if scanned_url %}
-    <div class="result-box">
-        <div class="url"><b>Scanned URL:</b> {{ scanned_url }}</div>
+```
+ShadowHunt/
+│
+├── app.py
+│
+└── templates/
+    └── index.html
+```
 
-        <h2 class="{% if 'Safe' in result %}safe{% elif 'Suspicious' in result %}suspicious{% else %}phishing{% endif %}">
-            {{ result }}
-        </h2>
+---
 
-        <p>Risk Score: <b>{{ score }}</b></p>
-    </div>
-    {% endif %}
+## ⚙️ Installation & Setup
 
-    <footer>
-        © ShadowHunt+ | Cybersecurity Project
-    </footer>
-</div>
+### 1️⃣ Clone the Repository
 
-</body>
-</html>
+```bash
+git clone https://github.com/your-username/ShadowHunt+.git
+cd ShadowHunt+
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install flask requests beautifulsoup4
+```
+
+### 3️⃣ Run the Application
+
+```bash
+python app.py
+```
+
+### 4️⃣ Open in Browser
+
+```
+http://127.0.0.1:5000/
+```
+
+---
+
+## 🧪 Basic Testing
+
+The application includes basic test cases to validate:
+
+* URL analysis logic
+* Final decision classification
+
+Tests run automatically when the app starts.
+
+---
+
+## 🎯 Use Cases
+
+* Cybersecurity learning projects
+* College mini projects
+* Hackathon demos
+* Understanding phishing detection techniques
+
+---
+
+## 📌 Future Enhancements
+
+* Machine Learning based phishing detection
+* URL reputation APIs integration
+* Scan history dashboard
+* Browser extension version
+* Real-time phishing alerts
+
+---
+
+## 👩‍💻 Author
+
+**Jhanvi**
+Second-year student | Aspiring Cybersecurity Engineer
+
+
