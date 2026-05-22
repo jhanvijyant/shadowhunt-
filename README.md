@@ -2,21 +2,21 @@
 
 ShadowHunt+ is a beginner-friendly **phishing website detection tool** built using **Python and Flask**. It analyzes a given URL and its webpage content to determine whether the site is **Safe, Suspicious, or Phishing**.
 
-This project is designed to demonstrate **real-world cybersecurity concepts** in a simple and understandable way, making it ideal for students, beginners, and hackathon demos.
+This project is designed to demonstrate **real-world cybersecurity concepts** in a simple, understandable way, making it ideal for students, beginners, and hackathon demos.
 
-🚀 Features
+ Features
 
-* 🔍 URL structure analysis (length, IP usage, special characters, HTTPS check)
-* 🌐 Live webpage content inspection
-* 🔐 Detects password fields and phishing keywords
-* 📊 Risk scoring mechanism
-* 🎯 Clear classification: Safe / Suspicious / Phishing
-* 🖥️ Clean cyber-themed web interface
-* ⚡ Lightweight and easy to run
+*  URL structure analysis (length, IP usage, special characters, HTTPS check)
+*  Live webpage content inspection
+*  Detects password fields and phishing keywords
+*  Risk scoring mechanism
+*  Clear classification: Safe / Suspicious / Phishing
+*  Clean cyber-themed web interface
+*  Lightweight and easy to run
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 1. User enters a website URL
 2. The system analyzes:
@@ -28,7 +28,7 @@ This project is designed to demonstrate **real-world cybersecurity concepts** in
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Backend:** Python, Flask
 * **Frontend:** HTML, CSS (Cyber-themed UI)
@@ -56,26 +56,26 @@ ShadowHunt/
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+###  Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/ShadowHunt+.git
 cd ShadowHunt+
 ```
 
-### 2️⃣ Install Dependencies
+###  Install Dependencies
 
 ```bash
 pip install flask requests beautifulsoup4
 ```
 
-### 3️⃣ Run the Application
+###  Run the Application
 
 ```bash
 python app.py
 ```
 
-### 4️⃣ Open in Browser
+###  Open in Browser
 
 ```
 http://127.0.0.1:5000/
@@ -83,7 +83,7 @@ http://127.0.0.1:5000/
 
 ---
 
-## 🧪 Basic Testing
+##  Basic Testing
 
 The application includes basic test cases to validate:
 
@@ -94,7 +94,7 @@ Tests run automatically when the app starts.
 
 ---
 
-## 🎯 Use Cases
+##  Use Cases
 
 * Cybersecurity learning projects
 * College mini projects
@@ -103,7 +103,7 @@ Tests run automatically when the app starts.
 
 ---
 
-## 📌 Future Enhancements
+##  Future Enhancements
 
 * Machine Learning based phishing detection
 * URL reputation APIs integration
@@ -112,10 +112,22 @@ Tests run automatically when the app starts.
 * Real-time phishing alerts
 
 ---
+## workflow:
+
+Input URL
+↓
+Analyze URL structure
+↓
+Fetch webpage content
+↓
+Check phishing indicators
+↓
+Generate risk score
+↓
+Classify result
 
 ## 👩‍💻 Author
 
-**Jhanvi**
-Second-year student | Aspiring Cybersecurity Engineer
+Jhanvi | Cybersecurity and Digital Forensics Student | Python & Security Projects
 
 
